@@ -64,6 +64,15 @@
   <ItemGroup>
     <Compile Include="Assets\Script\BackButton.cs" />
     <Compile Include="Assets\Script\CastleFunction.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\DestroyObject.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\HurtPlayer.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\MineController.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\ParallaxBackground.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\PressEnter.cs" />
+    <Compile Include="Assets\Underwater Diving\Scripts\TitleScreen.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Jayden/Desktop/SSAD_Pancake/SSAD_Pancake/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
