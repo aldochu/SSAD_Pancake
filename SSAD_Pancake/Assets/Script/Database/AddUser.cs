@@ -5,6 +5,7 @@ using Firebase;
 using Firebase.Unity.Editor;
 using Firebase.Database;
 
+
 public class AddUser : MonoBehaviour
 {
     private DatabaseReference mDatabaseRef;
@@ -16,7 +17,7 @@ public class AddUser : MonoBehaviour
         // Get the root reference location of the database.
          mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
 
-        getUserAvatar();
+        getUser();
     }
 
 
@@ -58,6 +59,28 @@ public class AddUser : MonoBehaviour
               for(int i = 0; i <4; i++)
               Debug.Log(avatar[i]);
               // Do something with snapshot...
+          }
+      });
+
+    }
+
+    public void getUser()
+    {
+        FirebaseDatabase.DefaultInstance
+      .GetReference("users").Child("abcdefghi")
+      .GetValueAsync().ContinueWith(task => {
+          if (task.IsFaulted)
+          {
+              Debug.Log("Failed to connect");
+              // Handle the error...
+          }
+          else if (task.IsCompleted)
+          {
+              DataSnapshot snapshot = task.Result;
+
+              StaticVariable.UserProfile = JsonUtility.FromJson<User>(snapshot.GetRawJsonValue());
+
+              Debug.Log("userid is: " + StaticVariable.UserProfile.userid + "  , email is: " + StaticVariable.UserProfile.email + "  , My avatar: " + StaticVariable.UserProfile.avatar.face);
           }
       });
 

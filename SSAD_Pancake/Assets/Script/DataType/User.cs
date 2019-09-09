@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class User : MonoBehaviour
+﻿[System.Serializable]
+public class User
 {
 
     public string userid;
     public string email;
+    public Avatar avatar = new Avatar();
 
     public User()
     {

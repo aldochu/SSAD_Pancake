@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Avatar : MonoBehaviour
+﻿
+[System.Serializable]
+public class Avatar
 {
     public string head;
     public string face;
